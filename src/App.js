@@ -60,7 +60,11 @@ class App extends Component {
         "https://the-index-api.herokuapp.com/api/authors/"
       );
       let authorsAPI = response.data;
-      this.setState({ authors: authorsAPI, loading: false });
+      this.setState({
+        filteredAuthors: authorsAPI,
+        authors: authorsAPI,
+        loading: false
+      });
       // this.setState({ loading: false });
     } catch (error) {
       console.error("Something Went Wrong");
